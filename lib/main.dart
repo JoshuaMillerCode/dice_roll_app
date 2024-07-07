@@ -1,37 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/widgets/gradient_container.dart';
 
+// class State {
+//   int timesClicked = 0;
+
+//   void handleClick() {
+//     timesClicked += 1;
+//     debugPrint('Button has been clicked $timesClicked times');
+//   }
+// }
+
+// State myState = State();
+
+//This must by main
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+  // Start of the app;
+  // This is provided by the flutter framework
+  runApp(
+    const MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('First App'),
-        ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Hello World!',
-              ),
-              Text(
-                'It\'s time to learn Flutter!',
-              ),
-            ],
-          ),
-        ),
+        body: GradientContainer.purple(),
       ),
-    );
-  }
+    ),
+  );
 }
